@@ -1,0 +1,13 @@
+.nav-bar {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+
+  .logo {
+    height: 100%;
+    width: 125px;
+    padding: 10px;
+  }
+}
