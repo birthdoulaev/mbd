@@ -1,29 +1,38 @@
-import { Fragment } from "react"
-import { Link } from "react-router-dom"
+import { Link, Outlet, NavLink } from "react-router-dom"
 
 import { ReactComponent as MbdLogo } from './../../assets/MBD_Logo_Color.svg';
 import './nav.styles.scss';
+import { Fragment } from "react";
 
 const Navigation = () => {
     return (
-        <nav className="nav-bar">
-            <div className="social-medias-container">
-                <span>Facebook</span>
-                <span>Instagram</span>
-            </div>
-            <MbdLogo className="logo" />
-            <div className="nav-links">
-                <Link className="nav-link" to='/'>
-                    Home
+        <Fragment>
+            <nav className="nav-bar">
+                <div className="social-medias-container">
+                    <Link to={'https://www.facebook.com/'} target="_blank" rel="noopener noreferrer">Facebook</Link>
+                    <Link to={'https://www.instagram.com/'} target="_blank" rel="noopener noreferrer">Instagram</Link>
+                </div>
+                <Link to={'/'}>
+                    <MbdLogo className="logo" />
                 </Link>
-                <Link className="nav-link" to='/about'>
-                    About
-                </Link>
-                <Link className="nav-link" to='/contact'>
-                    Contact
-                </Link>
-            </div>
-        </nav>
+                <div className="nav-links">
+                    <NavLink className="nav-link" activeclassname="active" to='/'>
+                        Home
+                    </NavLink>
+                    <NavLink className="nav-link" activeclassname="active" to='/about'>
+                        About
+                    </NavLink>
+                    <NavLink className="nav-link" activeclassname="active" to='/services'>
+                        Services
+                    </NavLink>
+                    <NavLink className="nav-link" activeclassname="active" to='/contact'>
+                        Contact
+                    </NavLink>
+                </div>
+            </nav>
+            <Outlet />
+        </Fragment>
+
     )
 }
 

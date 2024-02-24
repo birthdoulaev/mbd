@@ -1,0 +1,112 @@
+.landing {
+  height: calc(100vh - 130px);
+  padding: 70px 0;
+
+  .home-background {
+    background: rgb(159, 111, 170, 0.5);
+    background: linear-gradient(
+      90deg,
+      rgba(159, 111, 170, 0.5) 0%,
+      rgba(102, 61, 144, 0.5) 100%
+    );
+    width: 100%;
+    border-radius: 15px;
+    text-align: right;
+    height: 100%;
+    position: relative;
+
+    .home-text {
+      position: absolute;
+      text-align: left;
+      margin-left: 50px;
+      color: white;
+      height: 100%;
+
+      h1 {
+        font-family: "Prata", Times, serif;
+        font-size: 44px;
+        font-weight: 100;
+      }
+
+      h3 {
+        font-family: "Amiri", Times, serif;
+        font-size: 28px;
+        font-weight: 100;
+      }
+
+      .call-to-action-btn {
+        margin-top: 40px;
+      }
+    }
+
+    .woman-on-armchair {
+      height: 100%;
+      margin-right: 40px;
+    }
+  }
+}
+
+.banner {
+  //   height: 150px;
+  padding: 30px 0;
+  background-color: rgba(102, 61, 144, 0.2);
+  text-align: center;
+
+  h3 {
+    font-family: "Amiri", Times, serif;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+
+  .person-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.black-void {
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.about-section {
+  .read-more-btn {
+    margin-left: auto;
+  }
+}
+
+.services-container {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .black-box {
+      width: 250px;
+      height: 250px;
+      background-color: black;
+    }
+  }
+
+}
+.see-all-btn {
+  margin-left: auto;
+}
+
+
+.contact-form-home-container {
+  text-align: center;
+
+  .go-to-contact-btn {
+    margin: auto;
+  }
+}

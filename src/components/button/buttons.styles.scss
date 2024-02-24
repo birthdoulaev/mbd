@@ -1,0 +1,16 @@
+button {
+    display: block;
+    font-family: "Fredoka", Helvetica, sans-serif;
+    padding: 15px 25px;
+    background-color: #663D90;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    border: unset;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9F6FAA;
+    }
+}
