@@ -14,11 +14,11 @@ a {
   color: #282828;
 }
 
-@media screen and (max-width: 1000px) {
-  body {
-    padding: 20px 50px 0;
-  }
-}
+// @media screen and (max-width: 1000px) {
+//   body {
+//     padding: 20px 50px 0;
+//   }
+// }
 
 
 .section-header {
@@ -27,6 +27,19 @@ a {
   margin-bottom: 0;
   font-weight: 100;
 }
+
+.pad70{
+  padding: 70px 100px;
+}
+
+.pad50 {
+  padding: 50px 100px;
+}
+
+.pad0 {
+  padding: 0 100px;
+}
+
 
 
 
@@ -43,5 +56,43 @@ a {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pad70, .pad50 {
+    padding: 50px;
+  }
+
+  .pad0 {
+    padding: 0 50px;
+  }
+
+  .section-header {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .pad70, .pad50 {
+    padding: 30px;
+  }
+
+  .pad0 {
+    padding: 0 30px;
+  }
+
+  .section-header {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .pad70, .pad50 {
+    padding: 30px 15px;
+  }
+
+  .pad0 {
+    padding: 0 15px;
   }
 }

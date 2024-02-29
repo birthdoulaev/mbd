@@ -6,11 +6,13 @@ import Button from '../../components/button/button.component';
 import Modal from '../../components/modal/modal.component';
 
 import './contact.styles.scss';
+import FormDatePicker from '../../components/form-datepicker/form-datepicker.component';
 
 const defaultFormFields = {
     name: '',
     email: '',
     phoneNumber: '',
+    dueDate: new Date(),
     message: ''
 }
 
@@ -18,11 +20,11 @@ const Contact = () => {
     const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const { name, email, phoneNumber, message } = formFields;
+    const { name, email, phoneNumber, dueDate, message } = formFields;
 
     const sendEmail = () => {
-        emailjs.sendForm('service_qnilq25', 'template_r2y9a5j', form.current, {publicKey: '3waP2db4ZnjL9vFZj'})
-        .then(() => {console.log('form sent')}, (err) => {console.log(err)})
+        emailjs.sendForm('service_qnilq25', 'template_r2y9a5j', form.current, { publicKey: '3waP2db4ZnjL9vFZj' })
+            .then(() => { console.log('form sent') }, (err) => { console.log(err) })
     }
 
 
@@ -31,7 +33,7 @@ const Contact = () => {
 
         try {
             console.log('form fields', formFields)
-            sendEmail()
+            // sendEmail()
             openModal();
             resetFormFields();
         } catch (error) {
@@ -54,6 +56,7 @@ const Contact = () => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
+        console.log(`${name}: ${value}`)
 
         setFormFields({ ...formFields, [name]: value })
     };
@@ -91,6 +94,9 @@ const Contact = () => {
                     onChange={handleChange}
                     name='phoneNumber'
                     value={phoneNumber} />
+
+                {/*<FormDatePicker onChange={handleChange} name='dueDate' value={dueDate} />*/}
+
 
                 <FormInput
                     label="Message"

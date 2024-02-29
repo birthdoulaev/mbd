@@ -1,6 +1,5 @@
 .landing {
   height: calc(100vh - 130px);
-  padding: 70px 100px;
 
   .home-background {
     background: rgb(159, 111, 170, 0.5);
@@ -74,21 +73,18 @@
 }
 
 .about-section {
-  padding: 0 100px;
-
   .read-more-btn {
     margin-left: auto;
   }
 }
 
 .services-section {
-  padding: 0 100px;
-
   .services-container {
     display: inline-flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     .service-container {
       display: flex;
@@ -128,4 +124,46 @@
   text-align: center;
   padding: 20px 0;
   background-color: rgba(102, 61, 144, 0.2);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .banner h3 {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .landing {
+    height: calc(100vh - 100px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .landing .home-background .woman-on-armchair {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .banner {
+    h3 {
+      font-size: 19px;
+    }
+
+    .person-container span {
+      font-size: 14px;
+    }
+  } 
+
+  .black-void {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .landing {
+    padding: 30px 15px;
+  }
 }

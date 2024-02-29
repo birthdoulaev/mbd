@@ -1,0 +1,41 @@
+.side-modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+
+  .side-modal-container {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+  }
+}
+
+.side-modal-content {
+  position: fixed;
+  height: 100%;
+  width: 40%;
+  min-width: 200px;
+  top: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+
+  .side-nav-links,
+  .side-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 16px;
+    font-family: Fredoka, Helvetica, sans-serif;
+  }
+}

@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <Fragment>
-            <section className='landing'>
+            <section className='landing pad70'>
                 <div className='home-background'>
                     <div className='home-text'>
                         <h1>Mother's Birth Doula</h1>
@@ -36,12 +36,12 @@ const Home = () => {
                     <span>Evelyn Kulcsar Ernano, DONA Trained birth doula</span>
                 </div>
             </section>
-            <section className='about-section'>
+            <section className='about-section pad0'>
                 <h1 className='section-header'>Get to know me</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturj.</p>
                 <Button onClick={onNavigateToAboutHandler} className='read-more-btn'>Read more</Button>
             </section>
-            <section className='services-section'>
+            <section className='services-section pad0'>
                 <h1 className='section-header'>My services</h1>
                 <div className='services-container'>
                     <div className='service-container'>
