@@ -1,3 +1,24 @@
+.about-page {
+    min-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container {
+    padding: 50px 100px;
+    display: flex;
+    width: 100%;
+
+    .about-text {
+        padding-right: 30px;
+    }
+
+    .pic {
+        width: 40%;
+        background-color: aqua;
+    }
+}
+
 .philosophy-and-mission-container {
     background: rgb(159, 111, 170, 0.5);
     background: linear-gradient(
@@ -6,5 +27,8 @@
       rgba(102, 61, 144, 0.5) 100%
     );
     width: 100%;
-    padding: 50px 0;
+    flex: 1;
+    padding: 50px 100px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }

@@ -61,7 +61,7 @@ const Contact = () => {
     return (
         <main className='contact-page-container'>
             <div className='contact-page-header'>
-                <h1>Let's chat</h1>
+                <h1 className='section-header'>Let's chat</h1>
                 <span>Interested in working with me? Let's talk about how I can help</span>
             </div>
             <form ref={form} onSubmit={handleSubmit}>

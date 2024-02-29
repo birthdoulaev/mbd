@@ -1,6 +1,6 @@
 .landing {
   height: calc(100vh - 130px);
-  padding: 70px 0;
+  padding: 70px 100px;
 
   .home-background {
     background: rgb(159, 111, 170, 0.5);
@@ -74,40 +74,45 @@
 }
 
 .about-section {
+  padding: 0 100px;
+
   .read-more-btn {
     margin-left: auto;
   }
 }
 
-.services-container {
-  display: inline-flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
+.services-section {
+  padding: 0 100px;
 
-  .service-container {
-    display: flex;
-    flex-direction: column;
+  .services-container {
+    display: inline-flex;
+    width: 100%;
     align-items: center;
+    justify-content: space-around;
 
-    .black-box {
-      width: 250px;
-      height: 250px;
-      background-color: black;
+    .service-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .black-box {
+        width: 250px;
+        height: 250px;
+        background-color: black;
+      }
     }
   }
-
 }
 .see-all-btn {
   margin-left: auto;
 }
 
-.section-header {
-  font-family: 'Amiri';
-  font-size: 40px;
-  margin-bottom: 0;
-  font-weight: 100;
-}
+// .section-header {
+//   font-family: "Amiri";
+//   font-size: 40px;
+//   margin-bottom: 0;
+//   font-weight: 100;
+// }
 
 .contact-form-home-container {
   text-align: center;

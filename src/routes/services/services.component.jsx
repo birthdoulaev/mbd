@@ -7,7 +7,7 @@ import './services.styles.scss';
 
 const Services = () => {
     return (
-        <div>
+        <div className='services-page'>
             <div className='service-box-container'>
                 <div className='black-box'>
                 </div>

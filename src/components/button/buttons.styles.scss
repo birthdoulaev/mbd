@@ -1,17 +1,22 @@
 button {
-    display: block;
-    min-width: 130px;
-    font-family: "Fredoka", Helvetica, sans-serif;
-    padding: 12px 25px;
-    background-color: #663D90;
-    font-size: 16px;
-    color: white;
-    border-radius: 15px;
-    border: unset;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
+  display: block;
+  min-width: 130px;
+  font-family: "Fredoka", Helvetica, sans-serif;
+  padding: 12px 25px;
+  background-color: #663d90;
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+  border: unset;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
 
-    &:hover {
-        background-color: #9F6FAA;
-    }
+  &:hover {
+    background-color: #9f6faa;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 2em var(adjust-hue(#663d90, 45deg));
+  }
 }

@@ -11,6 +11,7 @@ const Navigation = () => {
                 <div className="social-medias-container">
                     <Link to={'https://www.facebook.com/'} target="_blank" rel="noopener noreferrer">Facebook</Link>
                     <Link to={'https://www.instagram.com/'} target="_blank" rel="noopener noreferrer">Instagram</Link>
+                    <a href="tel:9293200120">(929) 320-0120</a>
                 </div>
                 <Link to={'/'}>
                     <MbdLogo className="logo" />
