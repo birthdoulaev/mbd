@@ -37,12 +37,12 @@ const Home = () => {
                 </div>
             </section>
             <section className='about-section'>
-                <h1>Get to know me</h1>
+                <h1 className='section-header'>Get to know me</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturj.</p>
                 <Button onClick={onNavigateToAboutHandler} className='read-more-btn'>Read more</Button>
             </section>
             <section className='services-section'>
-                <h1>My services</h1>
+                <h1 className='section-header'>My services</h1>
                 <div className='services-container'>
                     <div className='service-container'>
                         <div className='black-box' />
@@ -60,11 +60,11 @@ const Home = () => {
                 <Button onClick={onNavigateToServicesHandler} className='see-all-btn'>See all</Button>
             </section>
             <section className='contact-form-home-container'>
-                <h1>Ready to get started?</h1>
+                <h1 className='section-header'>Ready to get started?</h1>
                 <span>I'm here to support you every step of the way</span>
                 <Button onClick={onNavigateToContactHandler} className='go-to-contact-btn'>Go to contact form</Button>
             </section>
-            <footer>All rights reserved</footer>
+            <footer className='home-footer'>&copy; Mother's Birth Doula. All rights reserved</footer>
         </Fragment>
     )
 }

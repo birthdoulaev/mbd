@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import FormInput from '../../components/form-input/form-input.component';
 import Button from '../../components/button/button.component';
+import Modal from '../../components/modal/modal.component';
 
 import './contact.styles.scss';
 
@@ -14,6 +15,7 @@ const defaultFormFields = {
 
 const Contact = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const { name, email, phoneNumber, message } = formFields;
 
 
@@ -22,12 +24,21 @@ const Contact = () => {
 
         try {
             console.log('form fields', formFields)
+            openModal();
             resetFormFields();
         } catch (error) {
             console.log(error)
         }
 
     }
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
@@ -40,23 +51,25 @@ const Contact = () => {
     };
 
     return (
-        <div>
-            <h1>Let's chat</h1>
-            <span>Interested in working with me? Let's talk about how I can help</span>
+        <main className='contact-page-container'>
+            <div className='contact-page-header'>
+                <h1>Let's chat</h1>
+                <span>Interested in working with me? Let's talk about how I can help</span>
+            </div>
             <form onSubmit={handleSubmit}>
 
                 <FormInput
                     label="Name"
                     type="text"
-                    required
+                    inputType={'input'}
                     onChange={handleChange}
                     name='name'
                     value={name} />
 
                 <FormInput
                     label="Email"
-                    type="email"
-                    required
+                    type="text"
+                    inputType={'input'}
                     onChange={handleChange}
                     name='email'
                     value={email} />
@@ -64,7 +77,7 @@ const Contact = () => {
                 <FormInput
                     label="Phone number"
                     type="text"
-                    required
+                    inputType={'input'}
                     onChange={handleChange}
                     name='phoneNumber'
                     value={phoneNumber} />
@@ -72,17 +85,22 @@ const Contact = () => {
                 <FormInput
                     label="Message"
                     type="text"
-                    required
+                    inputType={'textarea'}
                     onChange={handleChange}
                     name='message'
                     value={message} />
 
                 <div className='btns-container'>
-                    <Button type="submit">Sign In</Button>
+                    <Button type="submit" className='message-me-btn'>Message me</Button>
                 </div>
-
+                <section>
+                    <Modal
+                        isModalOpen={isModalOpen}
+                        onClose={closeModal}
+                    />
+                </section>
             </form>
-        </div>
+        </main>
     )
 }
 

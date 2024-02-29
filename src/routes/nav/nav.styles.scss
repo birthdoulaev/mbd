@@ -10,7 +10,7 @@
     flex: 1;
     gap: 40px;
     display: inline-flex;
-    font-size: 21px;
+    font-size: 16px;
     font-family: Fredoka, Helvetica, sans-serif;
   }
 
@@ -27,7 +27,20 @@
   }
 
   .active {
-    color: #663D90;
+    color: #663d90;
     font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-bar .social-medias-container,
+  .nav-bar .nav-links {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-bar .logo {
+    height: 80px;
   }
 }
