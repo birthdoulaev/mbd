@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 import FormInput from '../../components/form-input/form-input.component';
 import Button from '../../components/button/button.component';
@@ -14,9 +15,15 @@ const defaultFormFields = {
 }
 
 const Contact = () => {
+    const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { name, email, phoneNumber, message } = formFields;
+
+    const sendEmail = () => {
+        emailjs.sendForm('service_qnilq25', 'template_r2y9a5j', form.current, {publicKey: '3waP2db4ZnjL9vFZj'})
+        .then(() => {console.log('form sent')}, (err) => {console.log(err)})
+    }
 
 
     const handleSubmit = async (event) => {
@@ -24,6 +31,7 @@ const Contact = () => {
 
         try {
             console.log('form fields', formFields)
+            sendEmail()
             openModal();
             resetFormFields();
         } catch (error) {
@@ -56,7 +64,7 @@ const Contact = () => {
                 <h1>Let's chat</h1>
                 <span>Interested in working with me? Let's talk about how I can help</span>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
 
                 <FormInput
                     label="Name"
@@ -64,6 +72,7 @@ const Contact = () => {
                     inputType={'input'}
                     onChange={handleChange}
                     name='name'
+                    required
                     value={name} />
 
                 <FormInput
@@ -72,10 +81,11 @@ const Contact = () => {
                     inputType={'input'}
                     onChange={handleChange}
                     name='email'
+                    required
                     value={email} />
 
                 <FormInput
-                    label="Phone number"
+                    label="Phone number (optional)"
                     type="text"
                     inputType={'input'}
                     onChange={handleChange}
@@ -87,6 +97,7 @@ const Contact = () => {
                     type="text"
                     inputType={'textarea'}
                     onChange={handleChange}
+                    required
                     name='message'
                     value={message} />
 

@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import './about.styles.scss';
+
 const About = () => {
     return (
         <Fragment>
