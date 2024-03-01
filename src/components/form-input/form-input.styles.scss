@@ -27,6 +27,9 @@ $main-color: black;
 
     &:focus {
       outline: none;
+      border-color: rgb(102, 61, 144);
+      border-width: 2px;
+
     }
 
     &:focus ~ .form-input-label {

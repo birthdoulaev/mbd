@@ -59,6 +59,13 @@ a {
   }
 }
 
+// Style for removing arrows from number type input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .pad70, .pad50 {
     padding: 50px;

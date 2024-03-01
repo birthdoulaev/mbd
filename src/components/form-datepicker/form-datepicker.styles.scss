@@ -12,6 +12,12 @@
     border-radius: 15px;
     border: 1px solid grey;
     margin: 25px 0;
+
+    &:focus {
+      outline: none;
+      border-color: rgb(102, 61, 144);
+      border-width: 2px;
+    }
   }
 
   .date-label {

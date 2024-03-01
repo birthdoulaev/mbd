@@ -81,6 +81,7 @@ const Contact = () => {
                 <FormInput
                     label="Email"
                     type="text"
+                    inputMode="email"
                     inputType={'input'}
                     onChange={handleChange}
                     name='email'
@@ -89,8 +90,10 @@ const Contact = () => {
 
                 <FormInput
                     label="Phone number (optional)"
-                    type="text"
+                    type="number"
                     inputType={'input'}
+                    inputMode="tel"
+                    pattern="[0-9]"
                     onChange={handleChange}
                     name='phoneNumber'
                     value={phoneNumber} />
