@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+import Button from '../button/button.component';
 import { ReactComponent as FacebookIcon } from '../../assets/facebook-176-svgrepo-com.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/instagram-167-svgrepo-com.svg';
 
@@ -24,16 +25,22 @@ const Modal = ({ isModalOpen, onClose }) => {
                         <p className="">I will get back to you as quickly as possible.</p>
                         <p>Until then, let's connect on social media</p>
                         <div className='social-media-icons'>
-                            <Link to={'https://www.facebook.com/'} target="_blank" rel="noopener noreferrer">
+                            <Link
+                                to={'https://www.facebook.com/profile.php?id=61557189740001'}
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <FacebookIcon className='social-media-icon' />
                             </Link>
-                            <Link to={'https://www.instagram.com/'} target="_blank" rel="noopener noreferrer">
+                            <Link
+                                to={'https://www.instagram.com/mothersbirthdoula?igsh=N3FocjZkZTc2bXY4&utm_source=qr'}
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <InstagramIcon className='social-media-icon' />
                             </Link>
 
                         </div>
                         <footer className="modal-footer">
-                            <button className='close-modal-btn' onClick={onClose}>Close</button>
+                            <Button customClassName='close-modal-btn' onClick={onClose}>Close</Button>
                         </footer>
                     </main>
                 </article>

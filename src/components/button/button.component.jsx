@@ -1,4 +1,4 @@
-import './buttons.styles.scss';
+import './button.styles.scss';
 
 const Button = ({ children, isLoading = false, customClassName = '', ...otherProps }) => {
     return (

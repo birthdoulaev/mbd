@@ -110,13 +110,13 @@ const Contact = () => {
                 <div className='btns-container'>
                     <Button type="submit" customClassName='message-me-btn'>Message me</Button>
                 </div>
-                <section>
-                    <Modal
-                        isModalOpen={isModalOpen}
-                        onClose={closeModal}
-                    />
-                </section>
             </form>
+            <section>
+                <Modal
+                    isModalOpen={isModalOpen}
+                    onClose={closeModal}
+                />
+            </section>
         </main>
     )
 }

@@ -28,8 +28,20 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                     </div>
 
                     <div className='side-social-links'>
-                        <Link to={'https://www.facebook.com/'} onClick={onSideModalClose} target="_blank" rel="noopener noreferrer">Facebook</Link>
-                        <Link to={'https://www.instagram.com/'} onClick={onSideModalClose} target="_blank" rel="noopener noreferrer">Instagram</Link>
+                        <Link
+                            to={'https://www.facebook.com/profile.php?id=61557189740001'}
+                            onClick={onSideModalClose}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Facebook
+                        </Link>
+                        <Link
+                            to={'https://www.instagram.com/mothersbirthdoula?igsh=N3FocjZkZTc2bXY4&utm_source=qr'}
+                            onClick={onSideModalClose}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Instagram
+                        </Link>
                         <a href="tel:9293200120">(929) 320-0120</a>
                     </div>
                 </main>
