@@ -22,7 +22,7 @@ const Home = () => {
                         <h1>Mother's Birth Doula</h1>
                         <h3>Birth Doula Services</h3>
                         <span>Providing support, guidance, and care for your unique journey into parenthood</span>
-                        <Button onClick={onNavigateToContactHandler}>
+                        <Button type='button'onClick={onNavigateToContactHandler}>
                             Contact me
                         </Button>
                     </div>
@@ -39,7 +39,7 @@ const Home = () => {
             <section className='about-section pad0'>
                 <h1 className='section-header'>Get to know me</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturj.</p>
-                <Button onClick={onNavigateToAboutHandler} customClassName='read-more-btn'>Read more</Button>
+                <Button type='button' onClick={onNavigateToAboutHandler} customClassName='read-more-btn'>Read more</Button>
             </section>
             <section className='services-section pad0'>
                 <h1 className='section-header'>My services</h1>
@@ -57,12 +57,12 @@ const Home = () => {
                         <span>Service 3</span>
                     </div>
                 </div>
-                <Button onClick={onNavigateToServicesHandler} customClassName='see-all-btn'>See all</Button>
+                <Button type='button' onClick={onNavigateToServicesHandler} customClassName='see-all-btn'>See all</Button>
             </section>
             <section className='contact-form-home-container'>
                 <h1 className='section-header'>Ready to get started?</h1>
                 <span>I'm here to support you every step of the way</span>
-                <Button onClick={onNavigateToContactHandler} customClassName='go-to-contact-btn'>Go to contact form</Button>
+                <Button type='button' onClick={onNavigateToContactHandler} customClassName='go-to-contact-btn'>Go to contact form</Button>
             </section>
             <footer className='home-footer'>&copy; Mother's Birth Doula. All rights reserved</footer>
         </Fragment>
