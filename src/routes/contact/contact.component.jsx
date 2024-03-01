@@ -95,8 +95,10 @@ const Contact = () => {
                     name='phoneNumber'
                     value={phoneNumber} />
 
-                {/*<FormDatePicker onChange={handleChange} name='dueDate' value={dueDate} />*/}
-
+                <FormDatePicker
+                    onChange={handleChange}
+                    name='dueDate'
+                    value={dueDate} />
 
                 <FormInput
                     label="Message"
