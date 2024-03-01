@@ -108,7 +108,7 @@ const Contact = () => {
                     value={message} />
 
                 <div className='btns-container'>
-                    <Button type="submit" className='message-me-btn'>Message me</Button>
+                    <Button type="submit" customClassName='message-me-btn'>Message me</Button>
                 </div>
                 <section>
                     <Modal
