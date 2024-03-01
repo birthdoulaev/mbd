@@ -166,4 +166,23 @@
   .landing {
     padding: 30px 15px;
   }
+
+  .banner {
+    h3 {
+      font-size: 16px;
+    }
+    
+    .person-container {
+      flex-direction: column;
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .home-footer {
+    font-size: 12px;
+    padding: 13px 0;
+  }
 }

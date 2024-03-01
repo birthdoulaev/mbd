@@ -6,6 +6,9 @@
   left: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 
   .side-modal-container {
     display: inline-block;
@@ -19,15 +22,20 @@
 .side-modal-content {
   position: fixed;
   height: 100%;
-  width: 40%;
   min-width: 200px;
   top: 0;
   right: 0;
+  width: 40%;
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: -4px 1px 10px 0px rgba(0, 0, 0, 0.4);
+  transform: translateX(200px);
+  transition: all 0.3s ease-in-out;
 
   .side-nav-links,
   .side-social-links {
@@ -37,5 +45,14 @@
     align-items: center;
     font-size: 16px;
     font-family: Fredoka, Helvetica, sans-serif;
+  }
+}
+
+.width-full {
+  opacity: 1;
+  pointer-events: visible;
+
+  .side-modal-container .side-modal-content {
+    transform: translateX(0);
   }
 }
