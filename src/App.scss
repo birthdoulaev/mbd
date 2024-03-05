@@ -1,25 +1,18 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-  // padding: 20px 100px 0;
   padding-top: 20px;
   color: #282828;
   font-family: 'Josefin Sans', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: #282828;
 }
-
-// @media screen and (max-width: 1000px) {
-//   body {
-//     padding: 20px 50px 0;
-//   }
-// }
-
 
 .section-header {
   font-family: "Amiri";
@@ -39,8 +32,6 @@ a {
 .pad0 {
   padding: 0 100px;
 }
-
-
 
 
 ::-webkit-scrollbar {

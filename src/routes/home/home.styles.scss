@@ -13,6 +13,7 @@
     text-align: right;
     height: 100%;
     position: relative;
+    overflow: hidden;
 
     .home-text {
       position: absolute;
@@ -33,15 +34,29 @@
         font-weight: 100;
       }
 
-      .call-to-action-btn {
+      .landing-contact-btn {
         margin-top: 40px;
       }
     }
 
-    .woman-on-armchair {
+    .home-bg-img {
       height: 100%;
-      margin-right: 40px;
+      width: 100%;
+
+      .plant {
+        height: 60%;
+      }
+   
+      .woman-on-armchair {
+        height: 100%;
+        margin-right: 40px;
+        width: auto;
+        object-fit: cover;
+        object-position: 20px center;
+        overflow: hidden;
+      }
     }
+
   }
 }
 
@@ -62,6 +77,11 @@
     display: inline-flex;
     align-items: center;
     gap: 15px;
+
+    .avatar {
+      // background: url(../../assets/img/DSC_8745-50x50.jpg);
+      border-radius: 50%;
+    }
   }
 }
 
@@ -85,11 +105,22 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 16px 0;
 
     .service-container {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      .service-img {
+        height: 250px;
+      }
+
+      .service-title {
+        margin-top: 20px;
+        font-size: 18px;
+        pointer-events: none;
+      }
 
       .black-box {
         width: 250px;
@@ -137,12 +168,16 @@
   .landing {
     height: calc(100vh - 100px);
   }
+
+  .plant {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .landing .home-background .woman-on-armchair {
-    height: 30px;
-  }
+  // .landing .home-background .woman-on-armchair {
+  //   height: 30px;
+  // }
 }
 
 @media screen and (max-width: 690px) {

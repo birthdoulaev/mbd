@@ -29,6 +29,10 @@
 
   .nav-links {
     justify-content: flex-end;
+
+    .nav-link:hover {
+      color: #663d90;
+    }
   }
 
   .nav-btn {
@@ -57,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 810px) {
   .nav-bar {
     .social-medias-container,
     .nav-links {

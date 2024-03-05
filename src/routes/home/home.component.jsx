@@ -1,38 +1,51 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
 
 import { ReactComponent as MbdHomeBackground } from './../../assets/pregnant-woman-on-couch.svg';
+import { ReactComponent as MbdPlant } from './../../assets/plant.svg';
+import { ReactComponent as VisitService } from './../../assets/services-illustrations/visit-illustration.svg';
+import avatarImage from './../../assets/img/DSC_8745-50x50.jpg';
+
 import Button from '../../components/button/button.component';
+
+
+import 'aos/dist/aos.css';
 import './home.styles.scss';
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     const navigate = useNavigate();
 
     const onNavigateToContactHandler = () => navigate('/contact');
     const onNavigateToAboutHandler = () => navigate('/about');
     const onNavigateToServicesHandler = () => navigate('/services');
 
-
-
     return (
         <Fragment>
             <section className='landing pad70'>
                 <div className='home-background'>
                     <div className='home-text'>
-                        <h1>Mother's Birth Doula</h1>
-                        <h3>Birth Doula Services</h3>
-                        <span>Providing support, guidance, and care for your unique journey into parenthood</span>
-                        <Button type='button'onClick={onNavigateToContactHandler}>
+                        <h1 data-aos="fade-right">Mother's Birth Doula</h1>
+                        <h3 data-aos="fade-right" data-aos-offset="300">Birth Doula Services</h3>
+                        <span data-aos="fade-right" data-aos-offset="500">Guiding light in your birth story</span>
+                        <Button type='button' onClick={onNavigateToContactHandler} customClassName='landing-contact-btn'>
                             Contact me
                         </Button>
                     </div>
-                    <MbdHomeBackground className='woman-on-armchair' />
+                    <div className='home-bg-img'>
+                        <MbdPlant className='plant' />
+                        <MbdHomeBackground className='woman-on-armchair' />
+                    </div>
                 </div>
             </section>
-            <section className='banner'>
+            <section data-aos="fade-left" className='banner'>
                 <h3>Empowering families with personalized doula services</h3>
                 <div className='person-container'>
-                    <div className='black-void' />
+                    <img src={avatarImage} alt='Avatar' className='avatar' />
                     <span>Evelyn Kulcsar Ernano, DONA Trained birth doula</span>
                 </div>
             </section>
@@ -44,17 +57,17 @@ const Home = () => {
             <section className='services-section pad0'>
                 <h1 className='section-header'>My services</h1>
                 <div className='services-container'>
-                    <div className='service-container'>
+                    <div data-aos="fade-right" data-aos-duration="600" className='service-container'>
                         <div className='black-box' />
-                        <span>Service 1</span>
+                        <span className='service-title'>Labor prep</span>
                     </div>
                     <div className='service-container'>
                         <div className='black-box' />
-                        <span>Service 2</span>
+                        <span className='service-title'>Labor support</span>
                     </div>
-                    <div className='service-container'>
-                        <div className='black-box' />
-                        <span>Service 3</span>
+                    <div data-aos="fade-left" data-aos-duration="600" className='service-container'>
+                        <VisitService className="service-img" />
+                        <span className='service-title'>Postpartum visit</span>
                     </div>
                 </div>
                 <Button type='button' onClick={onNavigateToServicesHandler} customClassName='see-all-btn'>See all</Button>

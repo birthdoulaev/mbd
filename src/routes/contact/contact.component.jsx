@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 import FormInput from '../../components/form-input/form-input.component';
@@ -20,24 +20,37 @@ const Contact = () => {
     const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const { name, email, phoneNumber, dueDate, message } = formFields;
 
-    const sendEmail = () => {
-        emailjs.sendForm('service_qnilq25', 'template_r2y9a5j', form.current, { publicKey: '3waP2db4ZnjL9vFZj' })
-            .then(() => { console.log('form sent') }, (err) => { console.log(err) })
-    }
+    useEffect(() => emailjs.init(process.env.EMAILJS_PUBLIC_KEY), []);
+
+    // const sendEmail = () => {
+    //     const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
+    //     const templateId = process.env.EMAILJS_TEMPLATE_ID;
+    //     const publicKey = process.env.EMAILJS_PUBLIC_KEY
+    //     emailjs.sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
+    //         .then(() => { console.log('form sent') }, (err) => { console.log(err) })
+    // }
 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
+        const templateId = process.env.EMAILJS_TEMPLATE_ID;
 
         try {
+            setLoading(true);
             console.log('form fields', formFields)
+            await emailjs.send(serviceId, templateId, form.current)
             // sendEmail()
             openModal();
-            resetFormFields();
         } catch (error) {
             console.log(error)
+        } finally {
+            setLoading(false);
+            resetFormFields();
         }
 
     }
@@ -56,7 +69,7 @@ const Contact = () => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        console.log(`${name}: ${value}`)
+        // console.log(`${name}: ${value}`)
 
         setFormFields({ ...formFields, [name]: value })
     };
@@ -113,7 +126,7 @@ const Contact = () => {
                     value={message} />
 
                 <div className='btns-container'>
-                    <Button type="submit" customClassName='message-me-btn'>Message me</Button>
+                    <Button isLoading={loading} type="submit" customClassName='message-me-btn'>Message me</Button>
                 </div>
             </form>
             <section>

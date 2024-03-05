@@ -1,3 +1,5 @@
+import profileImage from './../../assets/img/DSC_8745_800x1200.jpg';
+
 import './about.styles.scss';
 
 const About = () => {
@@ -9,7 +11,7 @@ const About = () => {
                     <p>I am a mother of one, and lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue</p>
                 </div>
-                <div className="pic"></div>
+                <img src={profileImage} alt='Profile' className="profile-img" />
             </div>
             <div className="philosophy-and-mission-container pad50">
                 <div className="philosophy-container">

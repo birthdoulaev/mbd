@@ -3,7 +3,7 @@ import './button.styles.scss';
 const Button = ({ children, isLoading = false, customClassName = '', ...otherProps }) => {
     return (
         <div className={`${customClassName} btn-container`}>
-            <button className='btn-three' disabled={isLoading} {...otherProps}>
+            <button className='mbd-btn' disabled={isLoading} {...otherProps}>
                 <span>{children}</span>
             </button>
         </div>
