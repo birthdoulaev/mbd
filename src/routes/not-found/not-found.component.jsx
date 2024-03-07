@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import NotFoundImg from '../../assets/404.png';
 
 import './not-found.styles.scss';
