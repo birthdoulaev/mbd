@@ -8,9 +8,10 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
     return (
         <div className={'side-modal-overlay' + (isSideModalOpen ? ' width-full' : '')} onClick={onSideModalClose}>
             <div className='side-modal-container'>
-                <main className='side-modal-content' onClick={e => e.preventDefault()}>
-                    <Button onClick={onSideModalClose}>Close</Button>
-
+                <main className='side-modal-content' onClick={e => e.stopPropagation()}>
+                    <div className="close-x-btn" onClick={onSideModalClose}>
+                        &#10005;
+                    </div>
                     <div className='side-nav-links'>
                         <NavLink className="nav-link" activeclassname="active" onClick={onSideModalClose} to='/'>
                             Home
@@ -43,6 +44,7 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                         </Link>
                         <a href="tel:9293200120">(929) 320-0120</a>
                     </div>
+                    <Button onClick={onSideModalClose}>Close</Button>
                 </main>
             </div>
         </div>

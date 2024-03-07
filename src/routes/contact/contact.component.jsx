@@ -24,7 +24,7 @@ const Contact = () => {
 
     const { name, email, phoneNumber, dueDate, message } = formFields;
 
-    useEffect(() => emailjs.init(process.env.EMAILJS_PUBLIC_KEY), []);
+    // useEffect(() => emailjs.init(process.env.EMAILJS_PUBLIC_KEY), []);
 
     // const sendEmail = () => {
     //     const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
@@ -37,8 +37,8 @@ const Contact = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
-        const templateId = process.env.EMAILJS_TEMPLATE_ID;
+        // const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
+        // const templateId = process.env.EMAILJS_TEMPLATE_ID;
 
         try {
             setLoading(true);

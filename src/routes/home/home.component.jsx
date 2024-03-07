@@ -31,7 +31,7 @@ const Home = () => {
                     <div className='home-text'>
                         <h1 data-aos="fade-right">Mother's Birth Doula</h1>
                         <h3 data-aos="fade-right" data-aos-offset="300">Guiding light in your birth story</h3>
-                        <q data-aos="fade-right" data-aos-offset="500" className='quote'>I do not care what kind of birth you have... a home birth, scheduled cesarean, epidural hospital birth,
+                        <q className='quote'>I do not care what kind of birth you have... a home birth, scheduled cesarean, epidural hospital birth,
                             or if you birth alone in the woods next to a baby deer. I care that you are supported in your choices, and that you are respected.</q>
                         <div className='quote-source'>
                             <span>- January Harshe, author and educator</span>

@@ -30,20 +30,27 @@
     text-align: justify;
     pointer-events: none;
 
+    .service-header {
+      font-family: "Amiri", Times, serif;
+      font-weight: 600;
+      font-size: 1.4em;
+    }
+
     .header-right {
       text-align: right;
     }
 
     .service-description li {
       display: table-row;
-      
+      line-height: 1.1em;
+
       &::before {
         display: table-cell;
         text-align: right;
         content: "+";
         font-size: 1em;
         font-weight: bold;
-        color: #ff404c;
+        color: rgb(102, 61, 144);
         padding-right: 12px;
       }
     }
@@ -57,31 +64,57 @@
       rgba(102, 61, 144, 0.5) 100%
     );
     color: white;
-    // transform: scale(1.1);
-    scale: 1.04;
   }
 }
-
-// .sbc-right:hover {
-//   -webkit-box-shadow: 8px 10px 9px -10px rgb(102 61 144);
-//   -moz-box-shadow: 8px 10px 9px -10px rgb(102 61 144);
-//   box-shadow: 8px 10px 9px -10px rgb(102 61 144);
-// }
-
-// .sbc-left:hover {
-//   -webkit-box-shadow: -8px 10px 9px -10px rgb(102 61 144);
-//   -moz-box-shadow: -8px 10px 9px -10px rgb(102 61 144);
-//   box-shadow: -8px 10px 9px -10px rgb(102 61 144);
-// }
 
 .left-container {
   margin-left: auto;
 }
 
-// .service-illustration {
-//   height: 270px;
+.highlight {
+  background: rgb(159, 111, 170, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(159, 111, 170, 0.5) 0%,
+    rgba(102, 61, 144, 0.5) 100%
+  );
+  color: white;
+  scale: 1.04;
+}
 
-//   g {
-//     height: 100%;
-//   }
-// }
+@media screen and (max-width: 1000px) {
+  .service-box-container .service-img {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .service-box-container .service-img {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sbc-left {
+    flex-direction: column;
+  }
+
+  .sbc-right {
+    flex-direction: column-reverse;
+  }
+
+  .service-box-container {
+    .ml,
+    .mr {
+      margin: 0 0 10px;
+    }
+
+    .side-container {
+      width: 95%;
+
+      h3 {
+        text-align: center !important;
+      }
+    }
+  }
+}

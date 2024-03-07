@@ -44,8 +44,13 @@ ul {
   text-align: justify;
 }
 
+.active {
+  color: #663d90;
+  font-weight: 600;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
  
 ::-webkit-scrollbar-track {
@@ -54,6 +59,7 @@ ul {
  
 ::-webkit-scrollbar-thumb {
   background-color: #663d90;
+  border-radius: 15px;
 
   &:hover {
     cursor: pointer;
@@ -126,5 +132,9 @@ input::-webkit-inner-spin-button {
 
   .pad0 {
     padding: 0 15px;
+  }
+
+  .section-header {
+    text-align: center;
   }
 }
