@@ -1,32 +1,108 @@
 .about-page {
-    min-height: calc(100vh - 130px);
-    display: flex;
-    flex-direction: column;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+}
+
+.doula-p {
+    margin-bottom: 40px;
+}
+
+.doula-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  li {
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    .list-element-content {
+        width: 200px;
+        height: 250px;
+        background: #fff;
+        padding: 20px 10px;
+        text-align: center;
+        position: relative;
+        border-radius: 15px;
+        -webkit-box-shadow: -2px 1px 6px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px 1px 6px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: -2px 1px 6px -2px rgba(0, 0, 0, 0.75);
+        border-top-left-radius: 45px;
+        pointer-events: none;
+        margin-bottom: 60px;
+       
+    
+        .list-title {
+          font-weight: 700;
+          color: rgb(102 61 144);
+        }
+    
+        &::after {
+          content: "";
+          position: absolute;
+          top: 40px;
+          height: 100%;
+          width: calc(100% + 16px);
+          left: -8px;
+          z-index: -1;
+          background: rgb(159, 111, 170, 0.5);
+          background: linear-gradient(
+            90deg,
+            rgba(159, 111, 170, 0.5) 0%,
+            rgba(102, 61, 144, 0.5) 100%
+          );
+          border-radius: 15px;
+          border-bottom-right-radius: 45px;
+        }
+    }
+
+      
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+  }
 }
 
 .about-container {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 75%;
+//   max-width: 1000px;
+  margin: auto;
 
-    .about-text {
-        padding-right: 30px;
-    }
+  .about-text {
+    padding-right: 30px;
+  }
 
-    .profile-img {
-        width: 30%;
-        border-radius: 15px;
-    }
+  .profile-img {
+    width: 30%;
+    border-radius: 15px;
+  }
 }
 
 .philosophy-and-mission-container {
-    background: rgb(159, 111, 170, 0.5);
-    background: linear-gradient(
-      90deg,
-      rgba(159, 111, 170, 0.5) 0%,
-      rgba(102, 61, 144, 0.5) 100%
-    );
-    width: 100%;
-    flex: 1;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  background: rgb(159, 111, 170, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(159, 111, 170, 0.5) 0%,
+    rgba(102, 61, 144, 0.5) 100%
+  );
+  width: 100%;
+  flex: 1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
+
+
+// @keyframes bounce-5 {
+//     0%   { transform: scale(1,1)    translateY(0); }
+//     10%  { transform: scale(1.1,.9) translateY(0); }
+//     30%  { transform: scale(.9,1.1) translateY(-100px); }
+//     50%  { transform: scale(1,1)    translateY(0); }
+//     57%  { transform: scale(1,1)    translateY(-7px); }
+//     64%  { transform: scale(1,1)    translateY(0); }
+//     100% { transform: scale(1,1)    translateY(0); }
+// }

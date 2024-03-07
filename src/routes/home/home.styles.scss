@@ -21,17 +21,30 @@
       margin-left: 50px;
       color: white;
       height: 100%;
+      width: 450px;
+      margin-top: 70px;
 
       h1 {
         font-family: "Prata", Times, serif;
-        font-size: 44px;
+        font-size: 2.75em;
         font-weight: 100;
       }
 
       h3 {
         font-family: "Amiri", Times, serif;
-        font-size: 28px;
+        font-size: 1.75em;
         font-weight: 100;
+      }
+
+      .quote {
+        line-height: 1.2em;
+      }
+
+      .quote-source {
+        font-style: italic;
+        text-align: right;
+        font-size: 0.87em;
+        margin-top: 10px;
       }
 
       .landing-contact-btn {
@@ -46,7 +59,7 @@
       .plant {
         height: 60%;
       }
-   
+
       .woman-on-armchair {
         height: 100%;
         margin-right: 40px;
@@ -56,7 +69,6 @@
         overflow: hidden;
       }
     }
-
   }
 }
 
@@ -68,7 +80,7 @@
 
   h3 {
     font-family: "Amiri", Times, serif;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 100;
     margin-top: 0;
   }
@@ -93,6 +105,14 @@
 }
 
 .about-section {
+  .home-about-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
   .read-more-btn {
     margin-left: auto;
   }
@@ -118,7 +138,7 @@
 
       .service-title {
         margin-top: 20px;
-        font-size: 18px;
+        font-size: 1.1em;
         pointer-events: none;
       }
 
@@ -157,39 +177,75 @@
   background-color: rgba(102, 61, 144, 0.2);
 }
 
+@media screen and (max-width: 1190px) {
+  .plant {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   .banner h3 {
-    font-size: 21px;
+    font-size: 1.3em;
   }
 }
 
 @media screen and (max-width: 790px) {
   .landing {
     height: calc(100vh - 100px);
+
+    .home-background .home-text {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+    }
   }
 
-  .plant {
-    display: none;
-  }
+  // .plant {
+  //   display: none;
+  // }
 }
 
 @media screen and (max-width: 700px) {
-  // .landing .home-background .woman-on-armchair {
-  //   height: 30px;
-  // }
+  .landing .home-background .home-text {
+    margin-left: 25px;
+    width: 330px;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    .quote {
+      font-size: 0.9em;
+    }
+
+    .quote-source {
+      font-size: 0.8em;
+    }
+  }
+
+  .services-section .services-container .service-container .service-title {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 690px) {
   .banner {
     h3 {
-      font-size: 19px;
+      font-size: 1.18em;
     }
 
     .person-container span {
-      font-size: 14px;
+      font-size: 0.87em;
     }
-  } 
+  }
 
   .black-void {
     width: 40px;
@@ -200,24 +256,32 @@
 @media screen and (max-width: 450px) {
   .landing {
     padding: 30px 15px;
+
+    .home-background .home-text {
+      width: 300px;
+
+      h1 {
+        font-size: 1.7em;
+      }
+    }
   }
 
   .banner {
     h3 {
-      font-size: 16px;
+      font-size: 1em;
     }
-    
+
     .person-container {
       flex-direction: column;
 
       span {
-        font-size: 12px;
+        font-size: 0.7em;
       }
     }
   }
 
   .home-footer {
-    font-size: 12px;
+    font-size: 0.7em;
     padding: 13px 0;
   }
 }

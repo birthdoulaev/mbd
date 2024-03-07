@@ -5,10 +5,10 @@ import AOS from 'aos';
 import { ReactComponent as MbdHomeBackground } from './../../assets/pregnant-woman-on-couch.svg';
 import { ReactComponent as MbdPlant } from './../../assets/plant.svg';
 import { ReactComponent as VisitService } from './../../assets/services-illustrations/visit-illustration.svg';
+import { ReactComponent as SupportService } from './../../assets/services-illustrations/labor-support-illustration.svg';
 import avatarImage from './../../assets/img/DSC_8745-50x50.jpg';
 
 import Button from '../../components/button/button.component';
-
 
 import 'aos/dist/aos.css';
 import './home.styles.scss';
@@ -30,8 +30,12 @@ const Home = () => {
                 <div className='home-background'>
                     <div className='home-text'>
                         <h1 data-aos="fade-right">Mother's Birth Doula</h1>
-                        <h3 data-aos="fade-right" data-aos-offset="300">Birth Doula Services</h3>
-                        <span data-aos="fade-right" data-aos-offset="500">Guiding light in your birth story</span>
+                        <h3 data-aos="fade-right" data-aos-offset="300">Guiding light in your birth story</h3>
+                        <q data-aos="fade-right" data-aos-offset="500" className='quote'>I do not care what kind of birth you have... a home birth, scheduled cesarean, epidural hospital birth,
+                            or if you birth alone in the woods next to a baby deer. I care that you are supported in your choices, and that you are respected.</q>
+                        <div className='quote-source'>
+                            <span>- January Harshe, author and educator</span>
+                        </div>
                         <Button type='button' onClick={onNavigateToContactHandler} customClassName='landing-contact-btn'>
                             Contact me
                         </Button>
@@ -51,7 +55,11 @@ const Home = () => {
             </section>
             <section className='about-section pad0'>
                 <h1 className='section-header'>Get to know me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturj.</p>
+                <p className='mbd-p home-about-text'>My name is Evelyn, and I am deeply passionate about supporting families
+                    during one of life's most sacred journeys: childbirth. As a birth doula, and a mother,
+                    I bring compassion, knowledge, and unwavering support to expectant parents throughout
+                    the journey of bringing new life into the world. My role is to provide emotional, physical,
+                    and informational support ...</p>
                 <Button type='button' onClick={onNavigateToAboutHandler} customClassName='read-more-btn'>Read more</Button>
             </section>
             <section className='services-section pad0'>
@@ -62,7 +70,7 @@ const Home = () => {
                         <span className='service-title'>Labor prep</span>
                     </div>
                     <div className='service-container'>
-                        <div className='black-box' />
+                        <SupportService className="service-img" />
                         <span className='service-title'>Labor support</span>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="600" className='service-container'>

@@ -43,7 +43,7 @@ const Contact = () => {
         try {
             setLoading(true);
             console.log('form fields', formFields)
-            await emailjs.send(serviceId, templateId, form.current)
+            // await emailjs.send(serviceId, templateId, form.current)
             // sendEmail()
             openModal();
         } catch (error) {
