@@ -6,6 +6,7 @@ import { ReactComponent as MbdHomeBackground } from './../../assets/pregnant-wom
 import { ReactComponent as MbdPlant } from './../../assets/plant.svg';
 import { ReactComponent as VisitService } from './../../assets/services-illustrations/visit-illustration.svg';
 import { ReactComponent as SupportService } from './../../assets/services-illustrations/labor-support-illustration.svg';
+import { ReactComponent as PrepService } from './../../assets/services-illustrations/labor-prep-illustration.svg';
 import avatarImage from './../../assets/img/DSC_8745-50x50.jpg';
 
 import Button from '../../components/button/button.component';
@@ -66,7 +67,7 @@ const Home = () => {
                 <h1 className='section-header'>My services</h1>
                 <article className='services-container'>
                     <div data-aos="fade-right" data-aos-duration="600" className='service-container'>
-                        <div className='black-box' />
+                        <PrepService className="service-img" />
                         <span className='service-title'>Labor prep</span>
                     </div>
                     <div className='service-container'>
