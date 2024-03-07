@@ -30,7 +30,14 @@ const Contact = () => {
         const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
         emailjs.sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
-            .then(() => { console.log('form sent') }, (err) => { console.log(err) })
+            .then(
+                () => {
+                    setLoading(false);
+                    openModal();
+                },
+                (err) => {
+                    console.log(err)
+                })
     }
 
 
@@ -40,11 +47,9 @@ const Contact = () => {
         try {
             setLoading(true);
             sendEmail()
-            openModal();
         } catch (error) {
             console.log(error)
         } finally {
-            setLoading(false);
             resetFormFields();
         }
 
