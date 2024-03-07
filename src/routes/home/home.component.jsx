@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <Fragment>
             <section className='landing pad70'>
-                <div className='home-background'>
+                <article className='home-background'>
                     <div className='home-text'>
                         <h1 data-aos="fade-right">Mother's Birth Doula</h1>
                         <h3 data-aos="fade-right" data-aos-offset="300">Guiding light in your birth story</h3>
@@ -44,7 +44,7 @@ const Home = () => {
                         <MbdPlant className='plant' />
                         <MbdHomeBackground className='woman-on-armchair' />
                     </div>
-                </div>
+                </article>
             </section>
             <section data-aos="fade-left" className='banner'>
                 <h3>Empowering families with personalized doula services</h3>
@@ -64,7 +64,7 @@ const Home = () => {
             </section>
             <section className='services-section pad0'>
                 <h1 className='section-header'>My services</h1>
-                <div className='services-container'>
+                <article className='services-container'>
                     <div data-aos="fade-right" data-aos-duration="600" className='service-container'>
                         <div className='black-box' />
                         <span className='service-title'>Labor prep</span>
@@ -77,7 +77,7 @@ const Home = () => {
                         <VisitService className="service-img" />
                         <span className='service-title'>Postpartum visit</span>
                     </div>
-                </div>
+                </article>
                 <Button type='button' onClick={onNavigateToServicesHandler} customClassName='see-all-btn'>See all</Button>
             </section>
             <section className='contact-form-home-container'>

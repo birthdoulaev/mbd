@@ -12,7 +12,7 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                     <div className="close-x-btn" onClick={onSideModalClose}>
                         &#10005;
                     </div>
-                    <div className='side-nav-links'>
+                    <article className='side-nav-links'>
                         <NavLink className="nav-link" activeclassname="active" onClick={onSideModalClose} to='/'>
                             Home
                         </NavLink>
@@ -25,9 +25,9 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                         <NavLink className="nav-link" activeclassname="active" onClick={onSideModalClose} to='/contact'>
                             Contact
                         </NavLink>
-                    </div>
+                    </article>
 
-                    <div className='side-social-links'>
+                    <article className='side-social-links'>
                         <Link
                             to={'https://www.facebook.com/profile.php?id=61557189740001'}
                             onClick={onSideModalClose}
@@ -43,7 +43,7 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                             Instagram
                         </Link>
                         <a href="tel:9293200120">(929) 320-0120</a>
-                    </div>
+                    </article>
                     <Button onClick={onSideModalClose}>Close</Button>
                 </main>
             </div>
