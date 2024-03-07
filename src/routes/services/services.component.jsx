@@ -6,6 +6,8 @@ import PhotoImg from '../../assets/services-illustrations/photo-illustration.png
 import PhoneImg from '../../assets/services-illustrations/phone-illustration.png';
 import VisitImg from '../../assets/services-illustrations/visit-illustration.png';
 import LactationImg from '../../assets/services-illustrations/lactation-support-illustration.png';
+import PrepImg from '../../assets/services-illustrations/labor-prep-illustration.png';
+
 
 
 import './services.styles.scss';
@@ -65,8 +67,7 @@ const Services = () => {
                         <li>To ensure individuals feel empowered, informed, and supported as they approach labor and delivery</li>*/}
                     </ul>
                 </article>
-                <div className='black-box'>
-                </div>
+                <img src={PrepImg} alt='Labor Preparation Illustration' className='service-img ml' />
             </section>
             <section className={`service-box-container sbc-left ${highlightedIndex === 2 ? 'highlight' : ''}`}>
                 <img src={ListImg} alt='Resources Illustration' className='service-img mr' />
