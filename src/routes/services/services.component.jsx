@@ -5,6 +5,8 @@ import ListImg from '../../assets/services-illustrations/list-illustration.png';
 import PhotoImg from '../../assets/services-illustrations/photo-illustration.png';
 import PhoneImg from '../../assets/services-illustrations/phone-illustration.png';
 import VisitImg from '../../assets/services-illustrations/visit-illustration.png';
+import LactationImg from '../../assets/services-illustrations/lactation-support-illustration.png';
+
 
 import './services.styles.scss';
 
@@ -111,8 +113,7 @@ const Services = () => {
                 <img src={VisitImg} alt='Postpartum Visit Illustration' className='service-img ml' />
             </section>
             <section className={`service-box-container sbc-left ${highlightedIndex === 6 ? 'highlight' : ''}`}>
-                <div className='black-box'>
-                </div>
+                <img src={LactationImg} alt='Lactation Support Illustration' className='service-img mr' />
                 <article className='side-container'>
                     <h3 className='section-header'>Lactation support</h3>
                     <ul className='service-description'>
