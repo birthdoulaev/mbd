@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 import FormInput from '../../components/form-input/form-input.component';
@@ -24,27 +24,22 @@ const Contact = () => {
 
     const { name, email, phoneNumber, dueDate, message } = formFields;
 
-    // useEffect(() => emailjs.init(process.env.EMAILJS_PUBLIC_KEY), []);
+    const sendEmail = () => {
+        const serviceId = process.env.REACT_APP_EMAILJS_EMAIL_SERVICE_ID;
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-    // const sendEmail = () => {
-    //     const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
-    //     const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    //     const publicKey = process.env.EMAILJS_PUBLIC_KEY
-    //     emailjs.sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
-    //         .then(() => { console.log('form sent') }, (err) => { console.log(err) })
-    // }
+        emailjs.sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
+            .then(() => { console.log('form sent') }, (err) => { console.log(err) })
+    }
 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // const serviceId = process.env.EMAILJS_EMAIL_SERVICE_ID;
-        // const templateId = process.env.EMAILJS_TEMPLATE_ID;
 
         try {
             setLoading(true);
-            console.log('form fields', formFields)
-            // await emailjs.send(serviceId, templateId, form.current)
-            // sendEmail()
+            sendEmail()
             openModal();
         } catch (error) {
             console.log(error)
@@ -69,7 +64,6 @@ const Contact = () => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        // console.log(`${name}: ${value}`)
 
         setFormFields({ ...formFields, [name]: value })
     };
