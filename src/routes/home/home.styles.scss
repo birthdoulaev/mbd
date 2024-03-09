@@ -73,7 +73,6 @@
 }
 
 .banner {
-  //   height: 150px;
   padding: 30px 0;
   background-color: rgba(102, 61, 144, 0.2);
   text-align: center;
@@ -91,7 +90,6 @@
     gap: 15px;
 
     .avatar {
-      // background: url(../../assets/img/DSC_8745-50x50.jpg);
       border-radius: 50%;
     }
   }
@@ -154,13 +152,6 @@
   margin-left: auto;
 }
 
-// .section-header {
-//   font-family: "Amiri";
-//   font-size: 40px;
-//   margin-bottom: 0;
-//   font-weight: 100;
-// }
-
 .contact-form-home-container {
   text-align: center;
   padding: 50px 0;
@@ -203,10 +194,6 @@
       }
     }
   }
-
-  // .plant {
-  //   display: none;
-  // }
 }
 
 @media screen and (max-width: 700px) {
