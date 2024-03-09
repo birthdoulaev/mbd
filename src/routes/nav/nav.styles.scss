@@ -8,6 +8,10 @@
   .hide-content {
     visibility: hidden;
     font-size: 1px !important;
+
+    .nav-btn {
+      visibility: visible;
+    }
   }
 
   .social-medias-container,
@@ -30,16 +34,19 @@
     .nav-link:hover {
       color: #663d90;
     }
+
+    .nav-btn {
+      display: none;
+      height: 20px;
+    }
+
+    .show-btn {
+      display: block;
+      cursor: pointer;
+    }
   }
 
-  .nav-btn {
-    display: none;
-    height: 20px;
-  }
 
-  .show-btn {
-    display: block;
-  }
 }
 
 .social-media-icon {

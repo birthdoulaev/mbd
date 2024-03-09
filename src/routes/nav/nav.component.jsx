@@ -58,9 +58,9 @@ const Navigation = () => {
                     <NavLink className="nav-link" activeclassname="active" to='/contact'>
                         Contact
                     </NavLink>
-                </div>
-                <div className={"nav-btn" + (isMobile ? ' show-btn' : '')} onClick={handleMenuBtnClick}>
-                    <img src={require("./../../assets/menu.png")} alt="Menu" height={20} />
+                    <div className={"nav-btn" + (isMobile ? ' show-btn' : '')} onClick={handleMenuBtnClick}>
+                        <img src={require("./../../assets/menu.png")} alt="Menu" height={20} />
+                    </div>
                 </div>
             </nav>
             <section>
