@@ -3,6 +3,11 @@ import { Link, Outlet, NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 import { ReactComponent as MbdLogo } from './../../assets/MBD_Logo_Color.svg';
+import { ReactComponent as FacebookIcon } from '../../assets/facebook-176-svgrepo-com.svg';
+import { ReactComponent as InstagramIcon } from '../../assets/instagram-167-svgrepo-com.svg';
+import { ReactComponent as PhoneIcon } from '../../assets/phone-number-svgrepo-com.svg';
+
+
 import SideModal from "../../components/side-modal/side-modal.component";
 
 import './nav.styles.scss';
@@ -21,21 +26,21 @@ const Navigation = () => {
 
     return (
         <Fragment>
-            <nav className="nav-bar pad0">
+            <nav className="nav-bar pad-nav">
                 <div className={"social-medias-container" + (isMobile ? ' hide-content' : '')}>
                     <Link
                         to={'https://www.facebook.com/profile.php?id=61557189740001'}
                         target="_blank"
                         rel="noopener noreferrer">
-                        Facebook
+                        <FacebookIcon className="social-media-icon" />
                     </Link>
                     <Link
                         to={'https://www.instagram.com/mothersbirthdoula?igsh=N3FocjZkZTc2bXY4&utm_source=qr'}
                         target="_blank"
                         rel="noopener noreferrer">
-                        Instagram
+                        <InstagramIcon className="social-media-icon" />
                     </Link>
-                    <a href="tel:9293200120">(929) 320-0120</a>
+                    <a href="tel:9293200120"><PhoneIcon className="social-media-icon" /></a>
                 </div>
                 <Link to={'/'}>
                     <MbdLogo className="logo" />

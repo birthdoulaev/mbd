@@ -3,7 +3,6 @@
 }
 
 body {
-  padding-top: 20px;
   color: #282828;
   font-family: 'Josefin Sans', Arial, sans-serif;
   overflow-x: hidden;
@@ -40,6 +39,10 @@ ul {
 
 .pad0 {
   padding: 0 250px;
+}
+
+.pad-nav {
+  padding: 10px 250px;
 }
 
 .mbd-p {
@@ -89,6 +92,10 @@ input::-webkit-inner-spin-button {
   .pad0 {
     padding: 0 100px;
   }
+
+ .pad-nav {
+    padding: 10px 100px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -98,6 +105,10 @@ input::-webkit-inner-spin-button {
 
   .pad0 {
     padding: 0 50px;
+  }
+
+  .pad-nav {
+    padding: 10px 50px;
   }
 
   .section-header {
@@ -124,6 +135,10 @@ input::-webkit-inner-spin-button {
     padding: 0 30px;
   }
 
+  .pad-nav {
+    padding: 10px 30px;
+  }
+
   .section-header {
     font-size: 1.87em;
   }
@@ -136,6 +151,10 @@ input::-webkit-inner-spin-button {
 
   .pad0 {
     padding: 0 15px;
+  }
+
+  .pad-nav {
+    padding: 10px 15px;
   }
 
   .section-header {

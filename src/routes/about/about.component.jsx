@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import profileImage from './../../assets/img/DSC_8745_800x1200.jpg';
 
 import './about.styles.scss';
@@ -60,7 +61,16 @@ const About = () => {
                         dimensions of childbirth and a commitment to personalized care, I strive to create a calm and
                         nurturing environment where parents can feel confident, connected and supported every step of the way.</p>
                 </div>
-                <img src={profileImage} alt='Evelyn Kulcsar-Ernano profile' className="profile-img" />
+                <div className='profile-img-container'>
+                    <img src={profileImage} alt='Evelyn Kulcsar-Ernano profile' className="profile-img" />
+                    <div>
+                        <span className='image-credit'>
+                            Image by&nbsp;
+                            <Link to={'https://matveyzphoto.com/'} target="_blank"
+                                rel="noopener noreferrer" className='image-credit-link'>Matvey Zabbi</Link>
+                        </span>
+                    </div>
+                </div>
             </article>
             <article className="philosophy-and-mission-container pad50">
                 <div className="mission-container">
