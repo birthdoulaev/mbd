@@ -1,9 +1,10 @@
 import { NavLink, Link } from 'react-router-dom';
 
 import Button from '../button/button.component';
+import PhoneButton from '../phone-button/phone-button.component';
+
 import { ReactComponent as FacebookIcon } from '../../assets/facebook-176-svgrepo-com.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/instagram-167-svgrepo-com.svg';
-import { ReactComponent as PhoneIcon } from '../../assets/phone-number-svgrepo-com.svg';
 
 import './side-modal.styles.scss';
 
@@ -45,7 +46,7 @@ const SideModal = ({ isSideModalOpen, onSideModalClose }) => {
                             rel="noopener noreferrer">
                             <InstagramIcon className="social-media-icon" />
                         </Link>
-                        <a href="tel:9293200120"> <PhoneIcon className="social-media-icon" /></a>
+                        <PhoneButton />
                     </article>
                     <Button onClick={onSideModalClose}>Close</Button>
                 </main>
