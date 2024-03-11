@@ -1,0 +1,45 @@
+.phone-dropdown-container {
+	width: 135px;
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 28px;
+	left: -55px;
+
+	.triangle {
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 0 15px 15px 15px;
+		border-color: transparent transparent #fff transparent;
+		transform: rotate(0deg);
+		margin: auto;
+	}
+
+	.phone-dropdown-content {
+		background-color: #fff;
+		border-radius: 10px;
+		height: 55ox;
+        line-height: 55px;
+        text-align: center;
+		width: 100%;
+		-webkit-box-shadow: 1px 3px 8px -3px rgba(0, 0, 0, 0.5);
+		-moz-box-shadow: 1px 3px 8px -3px rgba(0, 0, 0, 0.5);
+		box-shadow: 1px 3px 8px -3px rgba(0, 0, 0, 0.5);   
+	}
+
+    .back-triangle {
+        border-color: transparent transparent rgba(102, 61, 144, 0.2) transparent;
+    }
+
+    .back {
+        background-color: rgba(102, 61, 144, 0.2);
+    }
+}
+
+.height-full {
+	height: 70px;
+	opacity: 1;
+	pointer-events: all;
+}
